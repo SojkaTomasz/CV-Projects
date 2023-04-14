@@ -3,6 +3,9 @@ body {
 	color: #272323;
 	background-color: #ecf1f9;
 	padding: 30px 0;
+	width: 70%;
+	max-width: 960px;
+	margin: 20px auto;
 }
 
 section,
@@ -10,9 +13,46 @@ header {
 	padding: 20px 60px;
 }
 
+@media (max-width: 768px) {
+	section,
+	header {
+		padding: 10px 30px;
+	}
+	ul {
+		padding-left: 0;
+	}
+	body {
+		padding: 10px 0;
+		width: 95%;
+	}
+}
+@media (max-width: 576px) {
+	.hobby {
+		flex-basis: 100%;
+	}
+	.header-center-element {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 576px) {
+	.hobby {
+		flex-basis: 50%;
+	}
+	.header-center-element {
+		margin-left: 20px;
+	}
+}
+
 header {
 	padding-top: 50px;
 	display: flex;
+	flex-wrap: wrap;
+}
+
+.section {
+	flex: 1;
+	text-align: center;
 }
 
 p {
@@ -44,7 +84,6 @@ ul li {
 .container {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	margin: 0 auto;
-	width: 960px;
 	background-color: white;
 	border-radius: 45px;
 }
@@ -87,7 +126,6 @@ header address ul {
 }
 
 .hobby {
-	flex-basis: 50%;
 	display: flex;
 	align-items: flex-start;
 	margin-bottom: 45px;
@@ -117,7 +155,6 @@ header address ul {
 }
 .header-center-element {
 	flex-grow: 1;
-	margin-left: 22px;
 }
 
 .download-cv-link:visited {
